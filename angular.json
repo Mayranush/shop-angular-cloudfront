@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/app",
+            "outputPath": "infra/resources",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["src/polyfills.ts"],
@@ -107,7 +107,8 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@angular-eslint/schematics"]
+    "schematicCollections": ["@angular-eslint/schematics"],
+    "analytics": "c03d9a5e-ee73-455f-bf5b-e05dcc15f60e"
   },
   "schematics": {
     "@angular-eslint/schematics:application": {

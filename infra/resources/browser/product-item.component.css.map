@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/products/product-item/product-item.component.scss"],
+  "sourcesContent": [".img-container {\r\n  padding-top: 90%;\r\n  position: relative;\r\n\r\n  &__inner {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  img {\r\n    object-fit: cover;\r\n    width: 100%;\r\n    height: 100%;\r\n    object-position: center center;\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,eAAA;AACA,YAAA;;AAEA,CAAA;AACE,YAAA;AACA,OAAA;AACA,QAAA;AACA,SAAA;AACA,UAAA;;AAGF,CAZF,cAYE;AACE,cAAA;AACA,SAAA;AACA,UAAA;AACA,mBAAA,OAAA;;",
+  "names": []
+}
