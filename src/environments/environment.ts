@@ -9,8 +9,8 @@ export const environment: Config = {
   apiEndpoints: {
     product: 'https://.execute-api.us-east-1.amazonaws.com/dev',
     order: 'https://.execute-api.us-east-1.amazonaws.com/dev',
-    import: 'https://rcwou7ztf5.execute-api.us-east-1.amazonaws.com/dev',
-    bff: 'https://zw4mzerjt9.execute-api.us-east-1.amazonaws.com/dev',
+    import: 'https://housqcngo5.execute-api.us-east-1.amazonaws.com/dev',
+    bff: 'https://sa1uldjkzj.execute-api.us-east-1.amazonaws.com/dev',
     cart: 'https://.execute-api.us-east-1.amazonaws.com/dev',
   },
   apiEndpointsEnabled: {

@@ -29,6 +29,7 @@ export class ManageProductsService extends ApiService {
     const url = this.getUrl('import', 'import');
     return this.http
       .get<{ url: string }>(url, {
+        headers: { Authorization: 'Basic TWF5cmFudXNoOlRFU1RfUEFTU1dPUkQ=' },
         params: { name: fileName },
       })
       .pipe(map((res: { url: string }) => res.url));
