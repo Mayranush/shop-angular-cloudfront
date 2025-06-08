@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EMPTY, Observable } from 'rxjs';
+import { EMPTY, Observable, map } from 'rxjs';
 import { ApiService } from '../../core/api.service';
 import { switchMap } from 'rxjs/operators';
 
@@ -14,24 +14,24 @@ export class ManageProductsService extends ApiService {
     }
 
     return this.getPreSignedUrl(file.name).pipe(
-      switchMap((url) =>
-        this.http.put(url, file, {
+      switchMap((url) => {
+        return this.http.put(url, file, {
           headers: {
             // eslint-disable-next-line @typescript-eslint/naming-convention
             'Content-Type': 'text/csv',
           },
-        }),
-      ),
+        });
+      }),
     );
   }
 
   private getPreSignedUrl(fileName: string): Observable<string> {
     const url = this.getUrl('import', 'import');
-
-    return this.http.get<string>(url, {
-      params: {
-        name: fileName,
-      },
-    });
+    return this.http
+      .get<{ url: string }>(url, {
+        headers: { Authorization: 'Basic TWF5cmFudXNoOlRFU1RfUEFTU1dPUkQ=' },
+        params: { name: fileName },
+      })
+      .pipe(map((res: { url: string }) => res.url));
   }
 }
